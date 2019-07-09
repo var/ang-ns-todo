@@ -1,1 +1,3 @@
-<Button text="todo-list works!" class="btn btn-primary"></Button>
+<div *ngFor="let todo of todos$ | async">
+    {{ todo.id }}
+</div>
