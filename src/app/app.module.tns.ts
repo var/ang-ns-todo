@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {TodoModule} from './todo/todo.module';
 import {Store, StoreModule} from '@ngrx/store';
 import {NativeScriptHttpClientModule} from 'nativescript-angular/http-client';
+import {EffectsModule} from '@ngrx/effects';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -23,6 +24,7 @@ import {NativeScriptHttpClientModule} from 'nativescript-angular/http-client';
       NativeScriptHttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
+      EffectsModule.forRoot([]),
       TodoModule
   ],
   providers: [Store],

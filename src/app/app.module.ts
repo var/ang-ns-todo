@@ -9,6 +9,7 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
       StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     TodoModule,
       !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
