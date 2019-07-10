@@ -3,7 +3,7 @@ import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {TodoModule} from './todo/todo.module';
+import {TodoModule} from './todo/module/todo.module';
 import {Store, StoreModule} from '@ngrx/store';
 import {NativeScriptHttpClientModule} from 'nativescript-angular/http-client';
 import {EffectsModule} from '@ngrx/effects';

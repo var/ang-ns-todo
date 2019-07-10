@@ -1,0 +1,6 @@
+<ActionBar title="My Todos"></ActionBar>
+<ListView [items]="todos">
+    <ng-template let-item="item">
+        <Label [text]="item.task"></Label>
+    </ng-template>
+</ListView>

@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoDetailComponent } from './todo-detail/todo-detail.component';
+import { TodoListComponent } from '../components/todo-list/todo-list.component';
+import { TodoDetailComponent } from '../components/todo-detail/todo-detail.component';
 import {Store, StoreModule} from '@ngrx/store';
-import * as fromTodo from './todo.reducer';
+import * as fromTodo from '../reducers/todo.reducer';
 import { EffectsModule } from '@ngrx/effects';
-import { TodoEffects } from './todo.effects';
-import {TodoService} from '~/app/todo/todo.service';
+import { TodoEffects } from '../effects/todo.effects';
+import {TodoService} from '~/app/todo/services/todo.service';
 
 @NgModule({
   declarations: [TodoListComponent, TodoDetailComponent],
