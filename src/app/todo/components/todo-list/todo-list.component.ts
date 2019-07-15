@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {TodoActionTypes} from '../../actions/todo.actions';
 import {select, Store} from '@ngrx/store';
-import {Observable} from 'rxjs';
-import {Todo} from '../../reducers/todo.reducer';
 import * as fromTodo from '../../reducers/todo.reducer';
 import {TodoService} from '~/app/todo/services/todo.service';
+import {Todo} from '~/app/todo/models/Todo';
+
+import * as TodoActions from '~/app/todo/actions/todo.actions';
 
 @Component({
   selector: 'app-todo-list',
@@ -18,7 +18,7 @@ export class TodoListComponent implements OnInit {
   constructor(private store: Store<fromTodo.State>) { }
 
   ngOnInit() {
-    this.store.dispatch({ type: TodoActionTypes.LoadTodos });
+    this.store.dispatch(TodoActions.LoadTodos);
     this.store.pipe(select(fromTodo.getTodos)).subscribe(todos => {
           this.todos = todos;
     });

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect, ofType } from '@ngrx/effects';
+import {Actions, createEffect, ofType} from '@ngrx/effects';
 
-import {catchError, concatMap, map, mergeMap} from 'rxjs/operators';
-import { TodoActionTypes, TodoActions } from '../actions/todo.actions';
+import {catchError, map, mergeMap} from 'rxjs/operators';
+
+import * as TodoActions from '~/app/todo/actions/todo.actions';
 
 import { TodoService } from '../services/todo.service';
 import {EMPTY} from 'rxjs';
@@ -10,17 +11,15 @@ import {EMPTY} from 'rxjs';
 @Injectable()
 export class TodoEffects {
 
-
-  @Effect()
-  loadTodos$ = this.actions$.pipe(
-    ofType(TodoActionTypes.LoadTodos),
+  loadTodos$ = createEffect(() => this.actions$.pipe(
+    ofType(TodoActions.LoadTodos),
       mergeMap(() => this.todoService.getAll()
           .pipe(
-              map(todos => ({ type: TodoActionTypes.LoadTodoSuccess, payload: todos })),
+              map(todos => (TodoActions.LoadTodoSuccess({payload: todos}))),
               catchError(() => EMPTY)
           ))
-  );
+  ));
 
-  constructor(private actions$: Actions<TodoActions>, private todoService: TodoService) {}
+  constructor(private actions$: Actions, private todoService: TodoService) {}
 
 }

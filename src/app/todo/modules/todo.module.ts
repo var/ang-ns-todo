@@ -6,7 +6,6 @@ import {Store, StoreModule} from '@ngrx/store';
 import * as fromTodo from '../reducers/todo.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { TodoEffects } from '../effects/todo.effects';
-import {TodoService} from '~/app/todo/services/todo.service';
 
 @NgModule({
   declarations: [TodoListComponent, TodoDetailComponent],
