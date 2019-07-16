@@ -24,7 +24,7 @@ export const getTodos = createSelector(
     state => state.todos
 );
 
-export const reducer = createReducer(
+export const todoReducer = createReducer(
     initialState,
     on(TodoActions.LoadTodos, state => ({
         ...state
@@ -35,8 +35,8 @@ export const reducer = createReducer(
     })),
 );
 
-export function todoReducer(
+export function reducer(
     state: State | undefined,
     action: Action) {
-  return reducer(state, action);
+  return todoReducer(state, action);
 }

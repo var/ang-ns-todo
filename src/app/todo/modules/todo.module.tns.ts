@@ -6,11 +6,13 @@ import {Store, StoreModule} from '@ngrx/store';
 import * as fromTodo from '../reducers/todo.reducer';
 import {EffectsModule} from '@ngrx/effects';
 import {TodoEffects} from '../effects/todo.effects';
+import {TodoRoutingModule} from '../routes/todo-routing.module.tns';
 
 @NgModule({
   declarations: [TodoListComponent, TodoDetailComponent],
   imports: [
     NativeScriptCommonModule,
+      TodoRoutingModule,
     StoreModule.forFeature('todo', fromTodo.reducer),
     EffectsModule.forFeature([TodoEffects]),
   ],
