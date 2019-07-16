@@ -3,11 +3,11 @@
     "compilerOptions": {
         "outDir": "./dist/out-tsc",
         "declaration": false,
-        "module": "esnext",
+        "target": "es2015",
+        "module": "esNext",
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "target": "es2015",
         "typeRoots": [
             "node_modules/@types"
         ],

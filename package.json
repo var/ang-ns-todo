@@ -20,7 +20,9 @@
     "android": "tns run android --bundle",
     "ios": "tns run ios --bundle",
     "mobile": "tns run --bundle",
-    "preview": "tns preview --bundle"
+    "preview": "tns preview --bundle",
+    "clean": "npx rimraf hooks node_modules platforms dist package-lock.json",
+    "clean-install": "npm run clean && npm install"
   },
   "private": true,
   "dependencies": {
@@ -44,7 +46,7 @@
     "nativescript-theme-core": "^1.0.6",
     "reflect-metadata": "~0.1.12",
     "tns-core-modules": "~5.2.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.801.0",
