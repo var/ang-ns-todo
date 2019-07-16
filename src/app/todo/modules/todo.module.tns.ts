@@ -3,7 +3,6 @@ import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { TodoListComponent } from '../components/todo-list/todo-list.component';
 import { TodoDetailComponent } from '../components/todo-detail/todo-detail.component';
 import {Store, StoreModule} from '@ngrx/store';
-import {TodoService} from '../services/todo.service';
 import * as fromTodo from '../reducers/todo.reducer';
 import {EffectsModule} from '@ngrx/effects';
 import {TodoEffects} from '../effects/todo.effects';
