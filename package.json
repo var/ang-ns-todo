@@ -17,7 +17,7 @@
     "test": "echo \"placeholder for unit tests\"",
     "test:ios": "echo \"placeholder for unit tests\"",
     "test:android": "echo \"placeholder for unit tests\"",
-    "lint": "echo \"placeholder for lint\"",
+    "lint": "ng lint",
     "e2e": "ng e2e",
     "android": "tns run android --bundle",
     "ios": "tns run ios --bundle",

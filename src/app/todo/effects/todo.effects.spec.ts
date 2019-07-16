@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { TodoEffects } from './todo.effects';
 
 describe('TodoEffects', () => {
+  // tslint:disable-next-line:prefer-const
   let actions$: Observable<any>;
   let effects: TodoEffects;
 
@@ -15,7 +16,6 @@ describe('TodoEffects', () => {
         provideMockActions(() => actions$)
       ]
     });
-
     effects = TestBed.get(TodoEffects);
   });
 
