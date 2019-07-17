@@ -3,6 +3,7 @@ import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
 
 import { TodoEffects } from './todo.effects';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('TodoEffects', () => {
   // tslint:disable-next-line:prefer-const
@@ -11,6 +12,7 @@ describe('TodoEffects', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       providers: [
         TodoEffects,
         provideMockActions(() => actions$)
