@@ -9,10 +9,10 @@ export interface State {
 export const initialState: State = {
   todos: [
     {
-      id: 'wrf',
-      createdAt: 'wfrwf',
-      task: 'wfwefwefwef',
-      user: 'wefwefwefwefwefwef'
+      id: '00000000000000000',
+      createdAt: '00000000000000000',
+      task: 'This is a dummy task',
+      user: 'me'
     },
   ]
 };

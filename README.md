@@ -1,6 +1,18 @@
+
+
+Starter project with: 
+
+- NativeScript 6
+- NgRX 8
+- Angular 8
+- SCSS
+- Code Sharing
+- Karma, Jasmine
+- Lazy loading
+
 # ang-ns-todo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.0.
+A simple todo app for web, ios and android, built with NativeScript 6. Can be used as a starter project.
 
 ## Development server
 
